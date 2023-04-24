@@ -39,7 +39,8 @@ public class java1_5 {
         // ただし計算は数値を直書きせず、全て変数を使ってすること
 
         // Q2を下記に記載
-    	System.out.println("BMIは" + d/((f/100)*(f/100)) + "です" );	
+    	double a = d/((f/100)*(f/100));
+    	System.out.println("BMIは" + ((Math.ceil(a * 10)) / 10) + "です" );	//小数点第二位で繰り上げ修正
         // Q3 Q1で宣言した変数に再代入し、下記の通りコンソールに出力してください
     	// 初めまして鈴木一郎です
     	// 年齢は24歳です
@@ -49,6 +50,7 @@ public class java1_5 {
     	// BMIは22.6です
 
         // Q3を下記に記載
+    	System.out.println("");//改行修正
     	String c1;
     	c1 = "鈴木一郎";
     	
