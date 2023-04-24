@@ -20,9 +20,8 @@ public class java1_7 {
 //		④int型の変数 integer を宣言し、変数 pi を int型に型変換しコンソールに出力して下さい。
 		double pi = 3.14;
 		System.out.println(pi * 3);
-		int integer = 10;
-		pi = integer;
-		System.out.println((int)pi);
+		int integer = (int)pi; //修正
+		System.out.println(integer); //修正
 		
 		
 //		問３）
