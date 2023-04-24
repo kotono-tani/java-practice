@@ -27,7 +27,7 @@ public class java1_4 {
     	 b = 0;
     	 s = 0;
     	 i = 0;
-    	 l = 0;
+    	 l = 0L;//修正
     	 f = 0.0f;
     	 d = 0.0;
     	 c = '\u0000';
@@ -42,7 +42,7 @@ public class java1_4 {
 	     // ・整数型                	 1000
     	 i = 1000;
 	     // ・長整数型                 10000
-    	 l = 10000;
+    	 l = 10000L;//修正
 	     // ・単精度浮動小数点数型   	 9.5
     	 f = 9.5f;
 	     // ・倍精度浮動小数点数型		 10.5
@@ -62,7 +62,7 @@ public class java1_4 {
 	     // 20.0
     	 System.out.println(f + d);
 	     // a ハロー true
-    	 System.out.println(c + st + bo);
+    	 System.out.println( c + " " + st + " " + bo);//修正
 	     // 11130.0                    数字を全て足す
     	 System.out.println(b + s + i + l + f + d);
 	     // 10000000000                小数点以外の数字を全てかける
@@ -74,8 +74,8 @@ public class java1_4 {
     	// Q5 
     	// 次のプログラムを実行すると「ハローJAVA2023」という結果が表示されます。
     	//「ハローJAVA43」と表示とさせたいのですが、意図通りに動きません。正しく動作するように修正してください。
- 		String num = "20";
- 		String num1 = "23";
+ 		int num = 20;//変数をintに変更
+ 		int num1 = 23;
  		System.out.println("ハローJAVA" + (num + num1));
  		 
      }
