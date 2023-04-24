@@ -34,7 +34,7 @@ public class java1_6 {
 //		あなたの年齢はおそらく〇〇歳ですね？
         int in = (int)(Math.random()*100);
         System.out.println("あなたの年齢を予想します。");
-        System.out.println("あなたの年齢はおそらく" + i + "歳ですね?");
+        System.out.println("あなたの年齢はおそらく" + in + "歳ですね?");
 	}
 
 }
