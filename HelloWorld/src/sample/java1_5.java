@@ -50,7 +50,7 @@ public class java1_5 {
     	// BMIは22.6です
 
         // Q3を下記に記載
-    	System.out.println("");//改行修正
+    	System.out.println(""); //改行修正
     	String c1;
     	c1 = "鈴木一郎";
     	
