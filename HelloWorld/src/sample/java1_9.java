@@ -9,7 +9,7 @@ public class java1_9 {
 //		もし rain が true ならコンソールに「DVDを見ます。」と false なら「外で遊びます。」と表示して下さい。
         boolean rain;
         rain = true;
-        if (rain) {
+        if (rain == true) { //修正
         	System.out.println("DVDを見ます。");
         } else {
         	System.out.println("外で遊びます。");
@@ -27,9 +27,9 @@ public class java1_9 {
         int score = (int)(Math.random()*100);
         if (score <= 40) {
         	System.out.println(name + "さんは" + score + "点です。もう少し頑張りましょう。");
-        } else if (score <= 60) {
+        } else if (score >= 40 && score <= 60) { //修正
         	System.out.println(name + "さんは" + score + "点です。もう少しでした。");
-        } else if (score <= 80) {
+        } else if (score >= 60 && score <= 80) { //修正
         	System.out.println(name + "さんは" + score + "点です。よくできました。");
         } else {
         	System.out.println(name + "さんは" + score + "点です。たいへんよくできました。");
