@@ -16,15 +16,15 @@ public class java1_13_1 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		int[] a = new int[5];
+		int[] a = new int[5]; //配列aを作成
 		a[0] = 1;
 		a[1] = 2;
 		a[2] = 3;
 		a[3] = 4;
-		a[4] = 5;
+		a[4] = 5; //1~5格納
 
-		for (int i = 0; i < 5; i++) {
-			System.out.println(a[i]);
+		for (int i = 0; i < 5; i++) { //繰り返し処理
+			System.out.println(a[i]); //表示
 			System.out.print(" ");
 		}
 
