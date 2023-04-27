@@ -17,20 +17,20 @@ public class java1_11 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-    int i = 4;
-    		switch (i) {
-    		case 2:
-    			System.out.println(i + "月は28日です。");
-    			break;
-    		case 4:
-    		case 6:
-    		case 9:
-    		case 11:
-    			System.out.println(i + "月は30日です。");
-    		    break;
-    		default:
-    			System.out.println(i + "月は31日です。");
-    		}
+		int i = 4;
+		switch (i) {
+		case 2:
+			System.out.println(i + "月は28日です。");
+			break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			System.out.println(i + "月は30日です。");
+			break;
+		default:
+			System.out.println(i + "月は31日です。");
+		}
 	}
 
 }
