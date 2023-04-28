@@ -16,19 +16,19 @@ public class java1_13_2 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		//①
-		int[] a = new int[5];
-		int b = 2; //②
-		a[0] = 1;
-		a[1] = 2;
-		a[2] = 3;
-		a[3] = 4;
-		a[4] = 5;
-		System.out.println(a[b]);
-		//③
+		
+		// ①
+		int[] a = {1,2,3,4,5};
+		int[] b;
+		b = a; // ② 修正
+
+		System.out.println(b[2]); //　修正
+		
+		// ③
 		a[3] = 10;
 		System.out.println(a[3]);
-		//④
+		
+		// ④
 		String str = "配列aの要素数は、" + a.length + "です。";
 		System.out.println(str);
 	}
