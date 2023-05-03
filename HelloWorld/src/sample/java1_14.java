@@ -38,7 +38,6 @@ public class java1_14 {
 
 				System.out.println(language[i]); // 出力
 
-				System.out.print(" "); // 改行
 
 				break; // dで止める
 			}
@@ -55,8 +54,6 @@ public class java1_14 {
 				continue;
 			}
 			System.out.println(name[a]); // 出力
-
-			System.out.print(" "); // 改行
 		}
 
 	}
