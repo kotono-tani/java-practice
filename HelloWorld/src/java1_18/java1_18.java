@@ -32,54 +32,53 @@ public class java1_18 {
 
 	public static ArrayList<Integer> generateRandomNumbers(int count) {
 		// 初期値を入れる
-		 ArrayList<Integer> randomNumbers = new ArrayList<>();
+		ArrayList<Integer> randomNumbers = new ArrayList<>();
 
 		// Randomクラスのインスタンス化
 		Random random = new Random();
 
 		// 条件
 		for (int i = 0; i < count; i++) {
-		int randomNumber = random.nextInt(100) + 1; // 1～100のランダムな数字を生成
-        if (randomNumber != 0) {
-            randomNumbers.add(randomNumber);
-            System.out.println(randomNumber);
+			int randomNumber = random.nextInt(100) + 1; // 1～100のランダムな数字を生成
+			if (randomNumber != 0) {
+				randomNumbers.add(randomNumber);
+				System.out.println(randomNumber);
 			}
 		}
-		
 
 		// 数字の配列を返す
-	 return randomNumbers;
-		
+		return randomNumbers;
+
 	}
-	 
-	        
-	    
 
 	// Q6：引数にQ5で作成したメソッドの返り値を受け取り、受け取った配列の要素の平均値をコンソールに出力するメソッドを作成してください。
 	// ※小数点以下も表示されるようにしてください。
 
 	public static double calculateAndPrintAverage(ArrayList<Integer> numbers) {
-		
+
 		// 初期値設定
 		double sum = 0;
-		
+
 		// 返り値を受け取る
 		ArrayList<Integer> randomNumbers = generateRandomNumbers(6);
 
+		// 条件
 		for (int number : numbers) {
-            sum += number;
-        }
+			sum += number;
+		}
 
-        double average = sum / numbers.size();
-        System.out.println(average);
- 
+		// 平均値の計算
+		double average = sum / numbers.size();
+		
+		// 出力
+		System.out.println(average);
+
 		return average;
 	}
 
-
 	// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください
 	public static void check50over(int num1) {
-		
+
 		ArrayList<Integer> randomNumbers = generateRandomNumbers(num1);
 
 		// 返り値を受け取る
