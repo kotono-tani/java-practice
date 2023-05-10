@@ -1,6 +1,6 @@
 package java1_18;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Random; // Q5
 
 public class java1_18 {
@@ -30,52 +30,63 @@ public class java1_18 {
 	// 格納した値を順番にコンソールで出力後、格納した値を返すメソッドを作成してください。
 	// ※0は出力＆格納しないようにしてください。
 
-	public static int[] generateRandomNumbers(int count) {
+	public static ArrayList<Integer> generateRandomNumbers(int count) {
 		// 初期値を入れる
-		int[] numbers = new int[count];
+		 ArrayList<Integer> randomNumbers = new ArrayList<>();
 
 		// Randomクラスのインスタンス化
-		Random rand = new Random();
+		Random random = new Random();
 
 		// 条件
 		for (int i = 0; i < count; i++) {
-
-			// 0を除く1~100までの数字
-			int num = rand.nextInt(100) + 1;
-			if (num != 0) {
-				numbers[i] = num;
-				System.out.println(num);
+		int randomNumber = random.nextInt(100) + 1; // 1～100のランダムな数字を生成
+        if (randomNumber != 0) {
+            randomNumbers.add(randomNumber);
+            System.out.println(randomNumber);
 			}
 		}
+		
 
 		// 数字の配列を返す
-		return numbers;
+	 return randomNumbers;
+		
 	}
+	 
+	        
+	    
 
 	// Q6：引数にQ5で作成したメソッドの返り値を受け取り、受け取った配列の要素の平均値をコンソールに出力するメソッドを作成してください。
 	// ※小数点以下も表示されるようにしてください。
 
-	public static double printAverage(int number) {
+	public static double calculateAndPrintAverage(ArrayList<Integer> numbers) {
+		
+		// 初期値設定
+		double sum = 0;
+		
 		// 返り値を受け取る
-		int[] numbers = generateRandomNumbers(number);
+		ArrayList<Integer> randomNumbers = generateRandomNumbers(6);
 
-		// 平均値を代入
-		double average = Arrays.stream(numbers).average().getAsDouble();
+		for (int number : numbers) {
+            sum += number;
+        }
 
-		// 出力
-		System.out.println(average);
-
+        double average = sum / numbers.size();
+        System.out.println(average);
+ 
 		return average;
 	}
 
+
 	// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください
 	public static void check50over(int num1) {
+		
+		ArrayList<Integer> randomNumbers = generateRandomNumbers(num1);
 
 		// 返り値を受け取る
-		double number = printAverage(num1);
+		double average = calculateAndPrintAverage(randomNumbers);
 
 		// 50以上の場合
-		if (number >= 50) {
+		if (average >= 50) {
 
 			// ture出力
 			System.out.println("true");
@@ -107,10 +118,10 @@ public class java1_18 {
 		mul(3.14);
 
 		// Q5
-		int[] result = generateRandomNumbers(5);
+		ArrayList<Integer> randomNumbers = generateRandomNumbers(５);
 
 		// Q6
-		printAverage(6);
+		generateRandomNumbers(6);
 
 		//Q7
 		check50over(3);
