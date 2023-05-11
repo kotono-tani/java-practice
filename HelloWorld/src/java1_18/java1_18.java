@@ -60,7 +60,7 @@ public class java1_18 {
 		double sum = 0;
 
 		// 返り値を受け取る
-		ArrayList<Integer> randomNumbers = generateRandomNumbers(6);
+		ArrayList<Integer> randomNumbers = generateRandomNumbers(5); // 修正
 
 		// 条件
 		for (int number : numbers) {
@@ -79,7 +79,7 @@ public class java1_18 {
 	// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください
 	public static void check50over(int num1) {
 
-		ArrayList<Integer> randomNumbers = generateRandomNumbers(num1);
+		ArrayList<Integer> randomNumbers = generateRandomNumbers(5); // 修正
 
 		// 返り値を受け取る
 		double average = calculateAndPrintAverage(randomNumbers);
@@ -110,20 +110,20 @@ public class java1_18 {
 		mul(3);
 
 		// Q3
-		int[] array = { 1, 2, 3, 4, 5 };
+		int[] array = {1,2,3,4,5};
 		printIntArray(array);
 
 		// Q4
 		mul(3.14);
 
 		// Q5
-		ArrayList<Integer> randomNumbers = generateRandomNumbers(５);
+		ArrayList<Integer> randomNumbers = generateRandomNumbers(5); 
 
 		// Q6
-		generateRandomNumbers(6);
+		generateRandomNumbers(5); // 修正
 
 		//Q7
-		check50over(3);
+		check50over(5); // 修正
 	}
 
 }
