@@ -1,66 +1,82 @@
 package java1_18;
 
-import java.util.ArrayList;
 import java.util.Random; // Q5
 
 public class java1_18 {
 	// Q1：引数に文字列型と整数型をいれてコンソールに「Hello JavaSE 11」と出力するメソッドを作成してください。
+
+	// 文字列型と整数型
 	public static void helloJavaSE(String message, int version) {
+
+		// 出力
 		System.out.println("Hello " + message + " " + version);
 	}
 
 	// Q2：引数に整数を渡すと渡した値同士を乗算しコンソールに出力するメソッドを作成してください
+
+	// 整数型
 	public static void mul(int c) {
+
+		// 出力
 		System.out.println(c * c);
 	}
 
 	// Q3：引数として整数の配列を渡すと、受け取った値を順番にコンソールに出力するメソッドを作成してください
+
+	// 配列
 	public static void printIntArray(int[] array) {
+
+		// 条件
 		for (int i = 0; i < array.length; i++) {
+
+			// 出力
 			System.out.println(array[i]);
 		}
 	}
 
 	// Q4：Q2をオーバーロードして引数を小数2つに変更し、引数同士を和算しコンソールに出力してください。
+
+	// double型
 	public static void mul(double num) {
+
+		// 出力
 		System.out.println(num + num);
 	}
 
 	// Q5：引数に整数を渡すと、1～100までのランダムな数字を引数の回数分格納して
 	// 格納した値を順番にコンソールで出力後、格納した値を返すメソッドを作成してください。
 	// ※0は出力＆格納しないようにしてください。
+	// 格納
+	public static int[] generateRandomNumbers(int count) {
 
-	public static ArrayList<Integer> generateRandomNumbers(int count) {
-		// 初期値を入れる
-		ArrayList<Integer> randomNumbers = new ArrayList<>();
+		// 初期値設定
+		int[] randomNumbers = new int[count];
 
-		// Randomクラスのインスタンス化
+		// randomクラスのインスタンス化
 		Random random = new Random();
 
 		// 条件
-		for (int i = 0; i < count; i++) {
-			int randomNumber = random.nextInt(100) + 1; // 1～100のランダムな数字を生成
-			if (randomNumber != 0) {
-				randomNumbers.add(randomNumber);
-				System.out.println(randomNumber);
-			}
+		for (int i = 1; i < count; i++) {
+
+			// 1〜100までの数字
+			int randomNumber = random.nextInt(100);
+			randomNumbers[i] = randomNumber;
+
+			// 出力
+			System.out.println(randomNumber);
 		}
 
 		// 数字の配列を返す
 		return randomNumbers;
-
 	}
 
 	// Q6：引数にQ5で作成したメソッドの返り値を受け取り、受け取った配列の要素の平均値をコンソールに出力するメソッドを作成してください。
 	// ※小数点以下も表示されるようにしてください。
+	// 格納
+	public static double calculateAverage(int[] numbers) {
 
-	public static double calculateAndPrintAverage(ArrayList<Integer> numbers) {
-
-		// 初期値設定
-		double sum = 0;
-
-		// 返り値を受け取る
-		ArrayList<Integer> randomNumbers = generateRandomNumbers(5); // 修正
+		// sumの初期値
+		int sum = 0;
 
 		// 条件
 		for (int number : numbers) {
@@ -68,35 +84,30 @@ public class java1_18 {
 		}
 
 		// 平均値の計算
-		double average = sum / numbers.size();
-		
+		double average = (double) sum / numbers.length;
+
 		// 出力
 		System.out.println(average);
 
+		// 平均値を返す
 		return average;
 	}
 
 	// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください
-	public static void check50over(int num1) {
-
-		ArrayList<Integer> randomNumbers = generateRandomNumbers(5); // 修正
+	// 格納
+	public static boolean isGreaterThan50(int[] numbers) {
 
 		// 返り値を受け取る
-		double average = calculateAndPrintAverage(randomNumbers);
+		double average = calculateAverage(numbers);
 
-		// 50以上の場合
-		if (average >= 50) {
+		// 条件
+		boolean result = average >= 50;
 
-			// ture出力
-			System.out.println("true");
+		// 出力
+		System.out.println(result);
 
-			// 違う場合
-		} else {
-
-			// false出力
-			System.out.println("false");
-		}
-
+		// 戻り値
+		return result;
 	}
 
 	public static void main(String[] args) {
@@ -110,20 +121,20 @@ public class java1_18 {
 		mul(3);
 
 		// Q3
-		int[] array = {1,2,3,4,5};
+		int[] array = { 1, 2, 3, 4, 5 };
 		printIntArray(array);
 
 		// Q4
 		mul(3.14);
 
 		// Q5
-		ArrayList<Integer> randomNumbers = generateRandomNumbers(5); 
+		int[] numbers = java1_18.generateRandomNumbers(5);
 
 		// Q6
-		generateRandomNumbers(5); // 修正
-
+		java1_18.calculateAverage(numbers);
+		
 		//Q7
-		check50over(5); // 修正
+		java1_18.isGreaterThan50(numbers);
 	}
 
 }
