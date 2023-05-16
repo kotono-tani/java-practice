@@ -8,8 +8,8 @@ public class java1_18 {
 	// 文字列型と整数型
 	public static void helloJavaSE(String message, int version) {
 
-		// 出力
-		System.out.println("Hello " + message + version); // 修正
+		// 出力 // 修正
+		System.out.println("Hello " + message + version); 
 	}
 
 	// Q2：引数に整数を渡すと渡した値同士を乗算しコンソールに出力するメソッドを作成してください
