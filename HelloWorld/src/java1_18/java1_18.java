@@ -9,7 +9,7 @@ public class java1_18 {
 	public static void helloJavaSE(String message, int version) {
 
 		// 出力
-		System.out.println("Hello " + message + " " + version);
+		System.out.println("Hello " + message + version); // 修正
 	}
 
 	// Q2：引数に整数を渡すと渡した値同士を乗算しコンソールに出力するメソッドを作成してください
@@ -56,11 +56,15 @@ public class java1_18 {
 		Random random = new Random();
 
 		// 条件
-		for (int i = 1; i < count; i++) {
+		for (int i = 0; i < count; i++) {
 
 			// 1〜100までの数字
-			int randomNumber = random.nextInt(100);
-			randomNumbers[i] = randomNumber;
+			int randomNumber = random.nextInt(100) + 1;
+			
+			// 0を除く // 修正
+			if (randomNumber != 0) {
+				randomNumbers[i] = randomNumber;
+			}
 
 			// 出力
 			System.out.println(randomNumber);
@@ -77,7 +81,6 @@ public class java1_18 {
 
 		// sumの初期値
 		int sum = 0;
-
 		// 条件
 		for (int number : numbers) {
 			sum += number;
@@ -128,13 +131,13 @@ public class java1_18 {
 		mul(3.14);
 
 		// Q5
-		int[] numbers = java1_18.generateRandomNumbers(5);
+		int[] numbers = generateRandomNumbers(5); // 修正
 
 		// Q6
-		java1_18.calculateAverage(numbers);
-		
+		calculateAverage(numbers); // 修正
+
 		//Q7
-		java1_18.isGreaterThan50(numbers);
+		isGreaterThan50(numbers); // 修正
 	}
 
 }
