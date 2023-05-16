@@ -130,8 +130,8 @@ public class java1_18 {
 		// Q4
 		mul(3.14);
 
-		// Q5
-		int[] numbers = generateRandomNumbers(5); // 修正
+		// Q5 // 修正
+		int[] numbers = generateRandomNumbers(5);
 
 		// Q6 // 修正
 		calculateAverage(numbers);
