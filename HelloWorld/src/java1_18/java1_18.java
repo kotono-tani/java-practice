@@ -133,8 +133,8 @@ public class java1_18 {
 		// Q5
 		int[] numbers = generateRandomNumbers(5); // 修正
 
-		// Q6
-		calculateAverage(numbers); // 修正
+		// Q6 // 修正
+		calculateAverage(numbers);
 
 		//Q7 // 修正
 		isGreaterThan50(numbers);
