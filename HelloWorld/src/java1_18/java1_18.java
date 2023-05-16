@@ -136,8 +136,8 @@ public class java1_18 {
 		// Q6 // 修正
 		calculateAverage(numbers);
 
-		//Q7 // 修正
-		isGreaterThan50(numbers);
+		//Q7
+		isGreaterThan50(numbers); // 修正
 	}
 
 }
