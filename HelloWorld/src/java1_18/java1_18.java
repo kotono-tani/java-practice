@@ -60,11 +60,7 @@ public class java1_18 {
 
 			// 1〜100までの数字
 			int randomNumber = random.nextInt(100) + 1;
-			
-			// 0を除く // 修正
-			if (randomNumber != 0) {
-				randomNumbers[i] = randomNumber;
-			}
+			randomNumbers[i] = randomNumber; // 修正
 
 			// 出力
 			System.out.println(randomNumber);
@@ -98,27 +94,23 @@ public class java1_18 {
 
 	// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください
 	// 格納
-	public static boolean isGreaterThan50(int[] numbers) {
+	public static boolean isGreaterThan50(double average) {
 
-		// 返り値を受け取る
-		double average = calculateAverage(numbers);
+		// 条件 // 修正
+		if (average >= 50) {
+			return true;
+		} else {
+			return false;
+		}
 
-		// 条件
-		boolean result = average >= 50;
-
-		// 出力
-		System.out.println(result);
-
-		// 戻り値
-		return result;
 	}
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+		// 修正
 		// 作成したメソッドをここで呼び出してください
 
 		// Q1
-		helloJavaSE("JavaSE", 11);
+		helloJavaSE("JavaSE ", 11); // 修正
 
 		// Q2
 		mul(3);
@@ -131,13 +123,15 @@ public class java1_18 {
 		mul(3.14);
 
 		// Q5 
-		int[] numbers = generateRandomNumbers(5); // 修正
+		int count = 5; // 格納するランダムな数字の個数を指定
+		int[] randomNumbers = generateRandomNumbers(count); // 修正
 
 		// Q6 
-		calculateAverage(numbers); // 修正
+		double average = calculateAverage(randomNumbers);// 修正
 
-		//Q7
-		isGreaterThan50(numbers); // 修正
+		// Q7 // 修正
+		boolean isGreaterThan50 = isGreaterThan50(average); // 修正
+		System.out.println(isGreaterThan50); // 修正
 	}
 
 }
