@@ -1,23 +1,12 @@
-package java1_19;
+package java1_19; // 修正
 
-//Q1 Dogクラス呼び出し
-class Dog {
-
-	// 代入
-	String name; // 名前
-	int number; // 動物の数
-}
-
-public class java1_19_animal {
+public class Animal {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 		// Q1：Dogクラスを呼び出して変数に代入し、動物の名前をコンソールに出力してください。
 		// インスタンスを生成し、変数aに代入
-		Dog a = new Dog();
-
-		// 代入
-		a.name = "犬";
+		Dog a = new Dog(0); // 修正
+		a.name = "リラン";
 
 		// 出力
 		System.out.println(a.name);
@@ -30,10 +19,10 @@ public class java1_19_animal {
 		System.out.println(a.number);
 		// 現在の日時を「yyyy-MM-dd H:m:s」形式で変数に代入して、コンソールに出力してください
 		// インスタンスを生成し、変数bに代入
-		Dog b = new Dog();
+		Dog b = new Dog(0); // 修正
 
 		// インスタンスに生成し、変数cに代入
-		Dog c = new Dog();
+		Dog c = new Dog(0); // 修正
 
 		// 代入
 		b.name = "2023-05-01";

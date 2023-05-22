@@ -1,6 +1,8 @@
 package java1_19;
 
-public class java1_19_dog {
+
+
+public class Dog {
 	// Q1：フィールドに動物の名前の変数を定義してください。
 	String name; //動物の名前
 
@@ -9,14 +11,14 @@ public class java1_19_dog {
 
 	// Q3：Q1で作成した変数に「犬」を代入するコンストラクタを作成してください。
 	// コンストラクタの宣言
-	java1_19_dog(String name) {
+	Dog(String name) {
 
 		// インスタンス変数に代入
-		this.name = name;
+		this.name = "犬"; // 修正
 	}
 
 	// Q4：Q2で作成した変数に引数を代入するコンストラクタを作成してください。
-	java1_19_dog(int number) {
+	Dog(int number) {
 
 		this.number = number;
 	}
