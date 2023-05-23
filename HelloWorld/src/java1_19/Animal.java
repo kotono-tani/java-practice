@@ -24,7 +24,7 @@ public class Animal {
 		LocalDateTime nowDate = LocalDateTime.now(); // 修正
 
 		// 表示形式を指定
-		DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+		DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyy-MM-dd H:m:s"); // 修正
 		String formatNowDate = dtf1.format(nowDate);
 		System.out.println(formatNowDate);
 	}
