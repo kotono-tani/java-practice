@@ -1,5 +1,8 @@
 package java1_19; // 修正
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Animal {
 
 	public static void main(String[] args) {
@@ -18,20 +21,12 @@ public class Animal {
 		// 出力
 		System.out.println(a.number);
 		// 現在の日時を「yyyy-MM-dd H:m:s」形式で変数に代入して、コンソールに出力してください
-		// インスタンスを生成し、変数bに代入
-		Dog b = new Dog(0); // 修正
+		LocalDateTime nowDate = LocalDateTime.now(); // 修正
 
-		// インスタンスに生成し、変数cに代入
-		Dog c = new Dog(0); // 修正
-
-		// 代入
-		b.name = "2023-05-01";
-
-		// 代入
-		c.name = "22:48:10";
-
-		// 出力
-		System.out.println(b.name + " " + c.name);
+		// 表示形式を指定
+		DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+		String formatNowDate = dtf1.format(nowDate);
+		System.out.println(formatNowDate);
 	}
 
 }
